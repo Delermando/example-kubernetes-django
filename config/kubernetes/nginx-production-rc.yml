@@ -40,27 +40,22 @@ spec:
       volumes:
         -
           hostPath:
-            #path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/nginx/sites-enabled
-            path: /usr/src/apps/iamyourcoder/production/config/nginx/sites-enabled
+            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/nginx/sites-enabled
           name: sites-enabled
         -
           hostPath:
-            #path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/nginx/server/nginx.conf
-            path: /usr/src/apps/iamyourcoder/production/config/nginx/server/nginx.conf
+            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/nginx/server/nginx.conf
           name: nginx-conf
         -
           hostPath:
-            #path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/src
-            path: /usr/src/apps/iamyourcoder/production/src
+            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/src
           name: app-src
         -
           hostPath:
-            #path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/docker-compose/entrypoint.sh
-            path: /usr/src/apps/iamyourcoder/production/config/docker-compose/entrypoint.sh
+            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/docker-compose/entrypoint.sh
           name: entrypoint
         -
           hostPath:
-            #path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/uwsgi
-            path: /usr/src/apps/iamyourcoder/production/config/uwsgi
+            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/uwsgi
           name: uwsgi-conf
 
