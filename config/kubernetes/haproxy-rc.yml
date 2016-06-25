@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: haproxy-rc
+  labels:
+    app: haproxy-rc
+spec:
+  replicas: 1
+  selector:
+    app: haproxy-rc
+  template:
+    metadata:
+      labels:
+        app: haproxy-rc
+    spec:
+      containers:
+      -
+        image: haproxy:1.6-alpine
+        name: haproxy-rc
+        volumeMounts:
+          - 
+            mountPath: /usr/local/etc/haproxy/haproxy.cfg
+            name: haproxy-config-file
+      volumes:
+        - 
+          hostPath:
+            path: /usr/src/apps/whereismycoffee/production/config/haproxy/haproxy.cfg
+          name: haproxy-config-file
