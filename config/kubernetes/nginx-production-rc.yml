@@ -40,22 +40,22 @@ spec:
       volumes:
         -
           hostPath:
-            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/nginx/sites-enabled
+            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/nginx/sites-enabled
           name: sites-enabled
         -
           hostPath:
-            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/nginx/server/nginx.conf
+            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/nginx/server/nginx.conf
           name: nginx-conf
         -
           hostPath:
-            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/src
+            path: /home/dsantos/Projects/Development/example-kubernetes-django/src
           name: app-src
         -
           hostPath:
-            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/docker-compose/entrypoint.sh
+            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/entrypoint.sh
           name: entrypoint
         -
           hostPath:
-            path: /home/dsantos/Dell/Dev/Projects/iamyourcoder/config/uwsgi
+            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/uwsgi
           name: uwsgi-conf
 
