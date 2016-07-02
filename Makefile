@@ -74,3 +74,11 @@ restart: restart-mysql restart-redis restart-nginx
 run: run-redis run-mysql run-nginx 
 
 rm: rm-nginx rm-mysql rm-redis
+
+rm-rc-all:
+	kubectl delete rc --all
+
+rm-svc-all:
+	kubectl delete svc --all
+
+rm-all: rm-rc-all rm-svc-all
