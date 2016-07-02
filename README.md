@@ -12,18 +12,15 @@ O comando abaixo fará todo o processo de descompactação do Banco para a pasta
 O comando abaixo fará download das imagens do Kubernetes caso você já não as tenha em sua máquina e as iniciara  
     `make kubernetes-run`
 
-#### **3 - Download kubectl**  
-O comando abaixo fará download kubectl, esque arquivo é um binário que disponibiliza um interface CLI para comunicação com a API do Kubernetes  
-    `wget http://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kubectl`
-
-Caso você queira usar o **kubectl** de forma global basta mover este binário para a pasta /usr/bin  
-    `mv kubectl /usr/bin`
-
-Após baixar o **kubectl** você será capaz de executar comandos como  
+#### **3 - kubectl**  
+O **kubectl** é um binário que disponibiliza um interface CLI para comunicação com a API do Kubernetes, execute o seguinte comando para testarmos o funcionamento dele:
 `kubecl get pods`  
 
 Caso o Kubernetes esteja funcionando perfeitamente o comando acima deverá retorna um output como o seguinte:
 `k8s-master-127.0.0.1   3/3       Running   0          7m`
+
+Caso você queira usar o **kubectl** de forma global basta mover este binário para a pasta /usr/bin  
+    `mv kubectl /usr/bin`
 
 #### **4 - Insetir paths do projeto**  
 Modifique os paths dos arquivos **mysql-rc.yml** e **nginx-rc.yml**, substitua o comentário  
