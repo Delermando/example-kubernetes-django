@@ -31,5 +31,5 @@ spec:
       volumes:
         - 
           hostPath:
-            path: /home/dsantos/Projects/Development/example-kubernetes-django/volumes/mysql-data
+            path: #path do projeto (pwd) /volumes/mysql-data
           name: mysql-storage

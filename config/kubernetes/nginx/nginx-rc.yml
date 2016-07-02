@@ -40,21 +40,21 @@ spec:
       volumes:
         -
           hostPath:
-            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/nginx/sites-enabled
+            path: #path do projeto (pwd)  /config/nginx/sites-enabled
           name: sites-enabled
         -
           hostPath:
-            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/nginx/server/nginx.conf
+            path: #path do projeto (pwd)  /config/nginx/server/nginx.conf
           name: nginx-conf
         -
           hostPath:
-            path: /home/dsantos/Projects/Development/example-kubernetes-django/src
+            path: #path do projeto (pwd)  /src
           name: app-src
         -
           hostPath:
-            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/entrypoint.sh
+            path: #path do projeto (pwd)  /config/entrypoint.sh
           name: entrypoint
         -
           hostPath:
-            path: /home/dsantos/Projects/Development/example-kubernetes-django/config/uwsgi
+            path: #path do projeto (pwd)  /config/uwsgi
           name: uwsgi-conf
