@@ -1,29 +1,45 @@
-### Kubernetes + Django
-
-Levatando uma aplicação Django usando o Kubernetes
+# Kubernetes + Django
 
 ![Kuberntes + Django]
 (http://ap.imagensbrasil.org/images/kuberntesdjango.png)
 
 ## Instalação
-1 - Inicie o banco de dados, o comando abaixo fará todo o processo de descompactação do Banco para a pasta correta 
+** 1 - Iniciando o banco de dados**  
+O comando abaixo fará todo o processo de descompactação do Banco para a pasta correta  
     `make boostrap`
 
-2 - Inicie o Kubernetes, o comando abaixo fará download das imagens do Kubernetes caso você já não tenha em sua máquina e as iniciára
+** 2 - Inicie o Kubernetes**  
+O comando abaixo fará download das imagens do Kubernetes caso você já não as tenha em sua máquina e as iniciara  
     `make kubernetes-run`
 
-3 - Faça download do kubectl, o comando abaixo fará download de executavel responsavél pela comunicação com a API do Kubernetes
-    `wget "http://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kubectl"` 
+**3 - Download kubectl**  
+O comando abaixo fará download kubectl, esque arquivo é um binário que disponibiliza um interface CLI para comunicação com a API do Kubernetes  
+    `wget http://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kubectl`
 
-    Caso você queira usar o Kubernetes de forma global basta mover este binário para a pasta de executaveis do seu sitema
+Caso você queira usar o **kubectl** de forma global basta mover este binário para a pasta /usr/bin  
     `mv kubectl /usr/bin`
 
-    Após baixar o kubectl você será capaz de executar o comando `kubecl get pods` sem problemas
-    e obter uma resposta como `k8s-master-127.0.0.1   3/3       Running   0          7m`
+Após baixar o **kubectl** você será capaz de executar comandos como  
+`kubecl get pods`  
 
-4 - Inserir os paths dos arquivos de configuração da aplicação, acesse os arquivos mysql-rc.yml, nginx-rc.yml e subtitua o comentário `#path do projeto (pwd)` pelo full path do seu sistema operacional até aquele projeto, você pode fazer isso pegando o output do comando `pwd` rodado de dentro da pasta do projeto
+Caso o Kubernetes esteja funcionando perfeitamente o comando acima deverá retorna um output como o seguinte:
+`k8s-master-127.0.0.1   3/3       Running   0          7m`
 
-5 - Iniciando aplicação, o comando abaixo iniciará os componentes da sua aplicação pelo Kubernetes (nginx, mysql, redis)
-    `make run`
+** 4 - Insetir paths do projeto **  
+Modifique os paths dos arquivos **mysql-rc.yml** e **nginx-rc.yml**, substitua o comentário  
+`#path do projeto (pwd)`  
 
-6 - Testar, acessando o browser no endereço `http://10.0.0.40/` você deverá ver uma mensagem de "Hello, world! Django + Kubernetes
+Pelo **full path** do seu sistema operacional até a pasta deste projeto
+`pwd`  
+`/home/dsantos/Projects/Development/example-kubernetes-django`
+
+**5 - Iniciando aplicação**  
+O comando abaixo iniciará os componentes da aplicação (nginx, mysql, redis) usando o Kubernetes  
+`make run`  
+
+** 6 - Hello World**  
+Acesse o browser no endereço  
+`http://10.0.0.40/`  
+
+Deve ser exibida a seguinte mensagem  
+"**Hello, world! Django + Kubernetes**"
