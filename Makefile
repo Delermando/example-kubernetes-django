@@ -65,28 +65,12 @@ run-nginx:
 
 restart-nginx: rm-nginx run-nginx
 
-mysql-neginx: rm-mysql run-nginx
-
-redis-neginx: rm-redis run-redis
-	
-run: run-redis run-mysql run-nginx 
-
-rm: rm-nginx rm-mysql rm-redis
-
-restart-nginx: rm-nginx run-nginx
-
 restart-mysql: rm-mysql run-mysql
 
 restart-redis: rm-redis run-redis
 
 restart: restart-mysql restart-redis restart-nginx
 
-### SSH Commands
-#tunel-connect:
-#	ssh -p 22 #ssh user@ip
+run: run-redis run-mysql run-nginx 
 
-#tunel-up:
-#	ssh -fN -L 8080:127.0.0.1:8080 #ssh user@ip
-
-#tunel-kill:
-#	killall ssh
+rm: rm-nginx rm-mysql rm-redis
