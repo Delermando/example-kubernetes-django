@@ -1,2 +1,4 @@
-volumes/mysql/*
+volumes/mysql-data*
+!volumes/*.tar.gz
+
 *.pyc
