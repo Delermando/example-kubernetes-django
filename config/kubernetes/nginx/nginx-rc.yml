@@ -52,7 +52,7 @@ spec:
           name: app-src
         -
           hostPath:
-            path: #path do projeto (pwd)  /config/entrypoint.sh
+            path: #path do projeto (pwd)  /config/kubernetes/nginx/entrypoint.sh
           name: entrypoint
         -
           hostPath:
