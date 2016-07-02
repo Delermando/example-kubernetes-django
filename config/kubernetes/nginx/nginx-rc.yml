@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       -
-        image: delermando/nginx-django:1.0
+        image: delermando/nginx-django:1.1
         name: nginx-rc
         ports:
           - 
@@ -58,4 +58,3 @@ spec:
           hostPath:
             path: /home/dsantos/Projects/Development/example-kubernetes-django/config/uwsgi
           name: uwsgi-conf
-
