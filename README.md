@@ -13,20 +13,18 @@ O comando abaixo fará download das imagens do Kubernetes caso você já não as
     `make kubernetes-run`
 
 #### **3 - kubectl**  
-O **kubectl** é um binário que disponibiliza um interface CLI para comunicação com a API do Kubernetes, execute o seguinte comando para testarmos o funcionamento dele:
+O **kubectl** é um binário que disponibiliza um interface CLI para comunicação com a API do Kubernetes, execute o seguinte comando para testarmos o funcionamento dele:  ou
 `kubecl get pods`  
 
-Caso o Kubernetes esteja funcionando perfeitamente o comando acima deverá retorna um output como o seguinte:
+Caso o Kubernetes esteja funcionando perfeitamente o comando acima deverá retorna o seguinte output:  
 `k8s-master-127.0.0.1   3/3       Running   0          7m`
 
 Caso você queira usar o **kubectl** de forma global basta mover este binário para a pasta /usr/bin  
     `mv kubectl /usr/bin`
 
 #### **4 - Insetir paths do projeto**  
-Modifique os paths dos arquivos **mysql-rc.yml** e **nginx-rc.yml**, substitua o comentário  
-`#path do projeto (pwd)`  
-
-Pelo **full path** do seu sistema operacional até a pasta deste projeto
+Modifique os paths dos arquivos **mysql-rc.yml** e **nginx-rc.yml**, substitua o comentário 
+`#path do projeto (pwd)` pelo **full path** do seu sistema operacional até a pasta deste projeto  
 `pwd`  
 `/home/dsantos/Projects/Development/example-kubernetes-django`
 
