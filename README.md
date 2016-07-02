@@ -25,7 +25,7 @@ Após baixar o **kubectl** você será capaz de executar comandos como
 Caso o Kubernetes esteja funcionando perfeitamente o comando acima deverá retorna um output como o seguinte:
 `k8s-master-127.0.0.1   3/3       Running   0          7m`
 
-**4 - Insetir paths do projeto **  
+**4 - Insetir paths do projeto**  
 Modifique os paths dos arquivos **mysql-rc.yml** e **nginx-rc.yml**, substitua o comentário  
 `#path do projeto (pwd)`  
 
